@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Priority Level</th>
+            <th>Progress Level</th>
+        </tr>
+        <tr>
+            <td id="title"></td>
+            <td id="description"></td>
+            <td id="category"></td>
+            <td id="priority"></td>
+            <td id="progress"></td>
+        </tr>
+    </table>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('title').innerText = urlParams.get('title');
+        document.getElementById('description').innerText = urlParams.get('description');
+        document.getElementById('category').innerText = urlParams.get('category');
+        document.getElementById('priority').innerText = urlParams.get('priority');
+        document.getElementById('progress').innerText = urlParams.get('progress');
+    </script>
+</body>
+</html>
