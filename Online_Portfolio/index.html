@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        ul, ol {
+            color: #555;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Esraa Amr</h1>
+    </header>
+    <section>
+        <p><strong>Date of Birth:</strong> 11/8/2001</p>
+        <p><strong>Education:</strong> Bachelor's degree in Computer and Systems Engineering, Ain Shams University</p>
+        <p><strong>Projects I've Worked On:</strong></p>
+        <ul>
+            <li>Intelligent Heritage Explorer <button class="button" onclick="window.location.href='https://drive.google.com/file/d/1qXm1379a2HF6h0Zo7NVa_OThG7gi4vCG/view'">View Project</button></li>
+            <li>Local Brand Mobile App <button class="button" onclick="window.location.href='https://apps.apple.com/eg/app/slash-hub/id6463633495'">View Project</button></li>
+            <li>Microwave Oven Controller <button class="button" onclick="window.location.href='https://github.com/mostsfamahmoud/Microwave-Oven-Controller'">View Project</button></li>
+        </ul>
+        <p><strong>Current Job:</strong> Software Test Engineer at METI</p>
+        <p><strong>Languages:</strong></p>
+        <ul>
+            <li>English</li>
+            <li>Arabic</li>
+            <li>German</li>
+        </ul>
+        <p><strong>Activities:</strong> Mobile app development, AI integration, Software testing</p>
+    </section>
+    <section>
+        <h2>Courses I've Attended</h2>
+        <ol>
+            <li>Machine Learning - 2024</li>
+            <li>Flutter Development - 2023</li>
+            <li>Advanced C++ Programming - 2022</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Contact Form</h2>
+        <form action="submit_form.php" method="POST">
+            <p>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="age">Your Age:</label>
+                <input type="number" id="age" name="age" required>
+            </p>
+            <p>
+                <label for="request">Your Request:</label>
+                <textarea id="request" name="request" rows="4" required></textarea>
+            </p>
+            <p>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
