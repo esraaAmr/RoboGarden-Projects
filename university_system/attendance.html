@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .attendance-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: #f0f8ff; /* Light blue background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .attendance-item {
+            background-color: #ffffff; /* White background for each item */
+            border: 1px solid #dee2e6; /* Light border */
+            padding: 15px;
+            font-size: 16px;
+            text-align: center;
+            width: 150px; /* Set a fixed width */
+            border-radius: 5px;
+        }
+        .attendance-item.present {
+            background-color: #28a745; /* Green for present */
+            color: white;
+        }
+        .attendance-item.absent {
+            background-color: #dc3545; /* Red for absent */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Attendance System</h1>
+    <div class="attendance-container">
+        <!-- Student 1 -->
+        <div class="attendance-item present">
+            <div>Student ID: 001</div>
+            <div>Attendance: Present</div>
+        </div>
+
+        <!-- Student 2 -->
+        <div class="attendance-item absent">
+            <div>Student ID: 002</div>
+            <div>Attendance: Absent</div>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="attendance-item present">
+            <div>Student ID: 003</div>
+            <div>Attendance: Present</div>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="attendance-item absent">
+            <div>Student ID: 004</div>
+            <div>Attendance: Absent</div>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="attendance-item present">
+            <div>Student ID: 005</div>
+            <div>Attendance: Present</div>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="attendance-item absent">
+            <div>Student ID: 006</div>
+            <div>Attendance: Absent</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            grid-gap: 10px;
+        }
+        .grid-item {
+            background-color: #f8f9fa; /* Light grey */
+            border: 1px solid #dee2e6; /* Light border */
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .grid-header {
+            background-color: #007bff; /* Blue */
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grades System</h1>
+    <div class="grid-container">
+        <!-- Headers -->
+        <div class="grid-item grid-header">Student Name</div>
+        <div class="grid-item grid-header">Student ID</div>
+        <div class="grid-item grid-header">Student Year</div>
+        <div class="grid-item grid-header">Student GPA</div>
+        <div class="grid-item grid-header">Letter Grade</div>
+        
+        <!-- Row 1 -->
+        <div class="grid-item">John Doe</div>
+        <div class="grid-item">001</div>
+        <div class="grid-item">Freshman</div>
+        <div class="grid-item">3.8</div>
+        <div class="grid-item">A</div>
+        
+        <!-- Row 2 -->
+        <div class="grid-item">Jane Smith</div>
+        <div class="grid-item">002</div>
+        <div class="grid-item">Sophomore</div>
+        <div class="grid-item">3.5</div>
+        <div class="grid-item">B+</div>
+        
+        <!-- Row 3 -->
+        <div class="grid-item">Michael Brown</div>
+        <div class="grid-item">003</div>
+        <div class="grid-item">Junior</div>
+        <div class="grid-item">2.9</div>
+        <div class="grid-item">C+</div>
+        
+        <!-- Row 4 -->
+        <div class="grid-item">Emily Davis</div>
+        <div class="grid-item">004</div>
+        <div class="grid-item">Senior</div>
+        <div class="grid-item">3.9</div>
+        <div class="grid-item">A+</div>
+    </div>
+</body>
+</html>
