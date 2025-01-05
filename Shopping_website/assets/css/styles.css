@@ -1,0 +1,29 @@
+.nav-item:hover{
+    background-color: #bbbbbb;
+}
+
+
+.card{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+@media(max-width:900px){
+    .navbar{
+        background-color: lightblue;
+    }
+}
+
+@media(max-width:600px){
+    .navbar{
+        background-color: lightgreen;
+    }
+}
+
+
+@media(max-width:400px){
+    .navbar{
+        background-color: lightsalmon;
+    }
+}
