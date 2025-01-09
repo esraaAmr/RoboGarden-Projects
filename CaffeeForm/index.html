@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Order Form</title>
+    <script>
+        function calculateOrder() {
+            var name = document.getElementById('name').value;
+            var coffeeType = document.querySelector('input[name="coffeeType"]:checked');
+            var extras = document.querySelectorAll('input[name="extras"]:checked');
+            var coffeeSize = document.getElementById('coffeeSize');
+
+            if (!name || !coffeeType || !coffeeSize) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            var total = parseFloat(coffeeType.value) + parseFloat(coffeeSize.value);
+
+            extras.forEach(extra => {
+                total += parseFloat(extra.value);
+            });
+
+            var summary = `Name: ${name}<br>
+                            Coffee Type: ${coffeeType.nextElementSibling.textContent}<br>
+                            Coffee Size: ${coffeeSize.options[coffeeSize.selectedIndex].text}<br>
+                            Extras: ${Array.from(extras).map(extra => extra.nextElementSibling.textContent).join(', ') || 'None'}<br>
+                            Total Price: $${total.toFixed(2)}`;
+
+            document.getElementById('orderSummary').innerHTML = summary;
+        }
+    </script>
+</head>
+<body>
+    <h1>Coffee Order Form</h1>
+
+    <form id="coffeeOrderForm">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Coffee Type Radio Buttons -->
+        <p>Which coffee do you want to order?</p>
+        <input type="radio" id="turkish" name="coffeeType" value="3" required>
+        <label for="turkish">Turkish coffee $3</label><br>
+
+        <input type="radio" id="american" name="coffeeType" value="5">
+        <label for="american">American coffee $5</label><br>
+
+        <input type="radio" id="icedLatte" name="coffeeType" value="7">
+        <label for="icedLatte">Iced latte $7</label><br><br>
+
+        <!-- Extras Checkbox -->
+        <p>Do you need any extras?</p>
+        <input type="checkbox" id="extraCoffee" name="extras" value="1.50">
+        <label for="extraCoffee">Extra coffee $1.50</label><br>
+
+        <input type="checkbox" id="whippedCream" name="extras" value="2">
+        <label for="whippedCream">Whipped cream $2</label><br>
+
+        <input type="checkbox" id="caramel" name="extras" value="3">
+        <label for="caramel">Caramel $3</label><br><br>
+
+        <!-- Coffee Size Dropdown -->
+        <label for="coffeeSize">What size?</label>
+        <select id="coffeeSize" name="coffeeSize" required>
+            <option value="1.50">Small $1.50</option>
+            <option value="2.50">Medium $2.50</option>
+            <option value="3.50">Large $3.50</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <button type="button" onclick="calculateOrder()">Submit</button>
+    </form>
+
+    <h2>Order Summary</h2>
+    <p id="orderSummary"></p>
+
+</body>
+</html>
